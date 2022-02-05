@@ -5,11 +5,9 @@
 </template>
 
 <script setup>
-const config = useRuntimeConfig();
+import { createClient } from '@supabase/supabase-js/dist/main/index'
 
-// import { createClient } from '@supabase/supabase-js'
+const { supabaseUrl, supabasePublicKey} = useRuntimeConfig();
 
-// const supabaseUrl = 'https://euqmldhpbztjixguprns.supabase.co'
-// const supabaseKey = process.env.SUPABASE_KEY
-// const supabase = createClient(supabaseUrl, supabaseKey)
+const supabase = createClient(supabaseUrl, supabasePublicKey)
 </script>
